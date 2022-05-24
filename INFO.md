@@ -13,3 +13,6 @@
 - npm install sass-loader@^12.0.0 sass --save-dev^C
 # for add maker
 composer require --dev symfony/maker-bundle
+# show command
+- bin/console
+- bin/console make:controller
