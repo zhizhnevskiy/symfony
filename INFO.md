@@ -12,7 +12,18 @@
 # for SCSS file
 - npm install sass-loader@^12.0.0 sass --save-dev^C
 # for add maker
-composer require --dev symfony/maker-bundle
+- composer require --dev symfony/maker-bundle
 # show command
-- bin/console
-- bin/console make:controller
+- php bin/console
+# Make new controller
+- php bin/console make:controller
+# Create new DB
+- change .env
+DATABASE_URL="mysql://admin:phpmyadmin@127.0.0.1:3306/symfony?serverVersion=5.7&charset=utf8mb4"
+- php bin/console doctrine:database:create
+# Make new model
+- php bin/console make:entity EntityName
+# Make new migration
+- php bin/console make:migration
+# Do migrations
+- php bin/console doctrine:migrations:migrate

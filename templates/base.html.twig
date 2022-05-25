@@ -19,17 +19,17 @@
 <header>
     {% block header %}
         <div class="header_logo">
-            <a href="">FW</a>
+            <a href="{{ path('home_page') }}">FAVOURITE VIDEO</a>
         </div>
         <nav>
             <ul>
-                <li><a href="">Главная</a></li>
-                <li><a href="">Добавить видео</a></li>
-                <li><a href="">Мои видео</a></li>
+                <li><a href="{{ path('home_page') }}">Home</a></li>
+                <li><a href="{{ path('add_video') }}">Add Video</a></li>
+                <li><a href="{{ path('video') }}">My Video</a></li>
             </ul>
         </nav>
 
-        <button class="green">Войти</button>
+        <button class="green">Sign in</button>
     {% endblock %}
 </header>
 
@@ -38,10 +38,10 @@
         {% block sidebar %}
             <ul>
                 <li>
-                    <a href="#">Добавить видео</a>
+                    <a href="{{ path('add_video') }}">Add Video</a>
                 </li>
                 <li>
-                    <a href="#">Добавить категорию</a>
+                    <a href="{{ path('add_category') }}">Add Category</a>
                 </li>
             </ul>
         {% endblock %}
@@ -55,7 +55,7 @@
 
 <footer>
     {% block footer %}
-        FOOTER
+        FOOTER @Zhizhnevskiy
     {% endblock %}
 </footer>
 </body>
