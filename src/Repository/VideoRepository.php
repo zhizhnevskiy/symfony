@@ -39,6 +39,28 @@ class VideoRepository extends ServiceEntityRepository
         }
     }
 
+    // New custom query
+    public function findByCategory($category_id)
+    {
+        return $this->createQueryBuilder('v')
+            ->where('v.category = :category_id')
+            ->setParameter('category_id', $category_id)
+            ->orderBy('v.title', 'ASC')
+            ->getQuery()
+            ->getResult();
+    }
+
+    // New custom query
+    public function findAllWithCategories()
+    {
+        return $this->createQueryBuilder('v')
+            ->select('v, c')
+            ->join('v.category', 'c')
+            ->getQuery()
+            ->getResult();
+    }
+
+
 //    /**
 //     * @return Video[] Returns an array of Video objects
 //     */

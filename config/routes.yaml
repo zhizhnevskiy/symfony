@@ -5,7 +5,3 @@ controllers:
 kernel:
     resource: ../src/Kernel.php
     type: annotation
-
-test:
-    path: /test
-    controller:  App\Controller\TestController::indexAction

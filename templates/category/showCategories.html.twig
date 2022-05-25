@@ -3,10 +3,14 @@
 {% block title %}Show Category!{% endblock %}
 
 {% block body %}
-    <h3>Show Categories</h3>
+    <h3>My Categories</h3>
     <ul>
         {% for category in categories %}
-            <li>{{ category.title }}</li>
+            <li>
+                <a href="{{ path('show_video_by_category', {'category_id': category.id}) }}">
+                    {{ category.title }}
+                </a>
+            </li>
         {% endfor %}
     </ul>
 {% endblock %}

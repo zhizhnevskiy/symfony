@@ -16,8 +16,8 @@ class Video
     #[ORM\Column(type: 'string', length: 255)]
     private $title;
 
-    #[ORM\Column(type: 'integer')]
-    private $category_id;
+    #[ORM\ManyToOne(targetEntity: Category::class)]
+    private $category;
 
     #[ORM\Column(type: 'string', length: 255)]
     private $youtube_id;
@@ -45,9 +45,9 @@ class Video
         return $this;
     }
 
-    public function getCategoryId(): ?int
+    public function getCategoryId()
     {
-        return $this->category_id;
+        return $this->category;
     }
 
     public function setCategoryId(int $category_id): self

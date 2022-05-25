@@ -2,9 +2,6 @@
 - symfony server:start
 # Require twig
 - composer require "twig/twig:^2.0"
-# Require doctrine
-- composer require symfony/orm-pack
-- composer require --dev symfony/maker-bundle
 # Require apache and add .htaccess to public
 - composer require symfony/apache-pack
 # To start using Symfony UX
@@ -18,6 +15,10 @@
 - php bin/console
 # Make new controller
 - php bin/console make:controller
+
+# Require doctrine
+- composer require symfony/orm-pack
+- composer require --dev symfony/maker-bundle
 # Create new DB
 - change .env
 DATABASE_URL="mysql://admin:phpmyadmin@127.0.0.1:3306/symfony?serverVersion=5.7&charset=utf8mb4"
@@ -30,3 +31,11 @@ DATABASE_URL="mysql://admin:phpmyadmin@127.0.0.1:3306/symfony?serverVersion=5.7&
 - php bin/console make:migration
 # Do migrations
 - php bin/console doctrine:migrations:migrate
+
+# For require security
+- composer require symfony/security-bundle
+# For create new user
+- php bin/console make:user
+# For make auth
+- php bin/console make:auth
+choose - Login form authenticator

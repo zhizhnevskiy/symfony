@@ -4,7 +4,7 @@
 
 {% block body %}
 
-    <h3>Show Videos</h3>
+    <h3>My Videos</h3>
     <div class="grid">
         {% for video in  showVideos %}
             <div class="grid_item">
@@ -13,6 +13,9 @@
                         {{ video.title }}
                     </a>
                 </h3>
+
+                <h3> {{ video.getCategoryId.title }}</h3>
+
                 <iframe width="420"
                         height="315"
                         src="https://www.youtube.com/embed/{{ video.youtubeId }}">
