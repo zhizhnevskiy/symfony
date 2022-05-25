@@ -25,7 +25,9 @@
             <ul>
                 <li><a href="{{ path('home_page') }}">Home</a></li>
                 <li><a href="{{ path('add_video') }}">Add Video</a></li>
-                <li><a href="{{ path('video') }}">My Video</a></li>
+                <li><a href="{{ path('show_videos') }}">Show Video</a></li>
+                <li><a href="{{ path('add_category') }}">Add Categories</a></li>
+                <li><a href="{{ path('show_category') }}">Show Categories</a></li>
             </ul>
         </nav>
 
@@ -41,7 +43,13 @@
                     <a href="{{ path('add_video') }}">Add Video</a>
                 </li>
                 <li>
+                    <a href="{{ path('show_videos') }}">Show Video</a>
+                </li>
+                <li>
                     <a href="{{ path('add_category') }}">Add Category</a>
+                </li>
+                <li>
+                    <a href="{{ path('show_category') }}">Show Categories</a>
                 </li>
             </ul>
         {% endblock %}

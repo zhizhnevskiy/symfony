@@ -13,21 +13,27 @@ class PageController extends AbstractController
     #[Route('/', name: 'home_page')]
     public function index(ManagerRegistry $doctrine): Response
     {
-        $entityManager = $doctrine->getManager();
+//        Add new row in DB
+//
+//        $entityManager = $doctrine->getManager();
+//
+//        $page = new Page();
+//        $page->setKeywords('favourite video')
+//            ->setDescription('favourite description')
+//            ->setTitle('favourite title')
+//            ->setContent('Site for adding video');
+//
+//        // tell Doctrine you want to (eventually) save the Product (no queries yet)
+//        $entityManager->persist($page);
+//        // actually executes the queries (i.e. the INSERT query)
+//        $entityManager->flush();
 
-        $page = new Page();
-        $page->setKeywords('favourite video')
-            ->setDescription('favourite description')
-            ->setTitle('favourite title')
-            ->setContent('Site for adding video');
-
-        // tell Doctrine you want to (eventually) save the Product (no queries yet)
-        $entityManager->persist($page);
-        // actually executes the queries (i.e. the INSERT query)
-        $entityManager->flush();
+//        Get row from DB
+        $homePage = $doctrine->getRepository(Page::class)
+        ->find(1);
 
         return $this->render('page/index.html.twig', [
-//            'controller_name' => 'PageController',
+            'homePage' => $homePage,
         ]);
     }
 }

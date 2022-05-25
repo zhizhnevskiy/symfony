@@ -1,0 +1,20 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Video!{% endblock %}
+
+{% block body %}
+    <h3>
+        <a href="{{ path('show_videos') }}">
+            &#8592; Show All Videos
+        </a>
+    </h3>
+    <h3>{{ video.title }}</h3>
+    <div class="grid">
+        <div class="grid_item">
+            <iframe width="840"
+                    height="430"
+                    src="https://www.youtube.com/embed/{{ video.youtubeId }}">
+            </iframe>
+        </div>
+    </div>
+{% endblock %}

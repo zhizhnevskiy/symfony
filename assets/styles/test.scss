@@ -5,6 +5,7 @@
   margin: 0;
   box-sizing: border-box;
 }
+
 html {
   height: 100%;
 }
@@ -17,7 +18,7 @@ body {
   flex-direction: column;
 }
 
-ul{
+ul {
   list-style-type: none;
 }
 
@@ -30,7 +31,7 @@ header {
   align-items: center;
 }
 
-header nav ul{
+header nav ul {
   display: flex;
   align-items: center;
 }
@@ -41,21 +42,21 @@ header nav a {
 }
 
 header .header_logo {
-  padding:20px 15px;
+  padding: 20px 15px;
   color: #ffffff;
   font-weight: bold;
   margin-right: auto;
 }
-header .header_logo a{
+
+header .header_logo a {
   text-decoration: none;
   color: #ffffff;
 }
 
 
-
-header ul li a{
-  display:block;
-  padding:20px 15px;
+header ul li a {
+  display: block;
+  padding: 20px 15px;
 }
 
 header ul li a:hover {
@@ -68,9 +69,10 @@ header button.green {
   background-color: rgba(0, 136, 169, 1);
   border: 1px solid gray;
   border-radius: 10px;
-  margin-left:20px;
+  margin-left: 20px;
   cursor: pointer;
 }
+
 .center_block_main {
   display: flex;
   margin: auto 0;
@@ -100,6 +102,25 @@ aside ul li a {
 
 aside ul li a:hover {
   background: #F5F5F5;
+}
+
+main {
+  padding: 20px;
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+
+  h3 {
+    margin: 20px 30px 20px 0;
+  }
+
+  .grid {
+    display: flex;
+
+    .grid_item {
+      margin: 20px;
+    }
+  }
 }
 
 footer {
