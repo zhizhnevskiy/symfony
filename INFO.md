@@ -36,6 +36,10 @@ DATABASE_URL="mysql://admin:phpmyadmin@127.0.0.1:3306/symfony?serverVersion=5.7&
 - composer require symfony/security-bundle
 # For create new user
 - php bin/console make:user
-# For make auth
+# For make auth (login and logout)
 - php bin/console make:auth
 choose - Login form authenticator
+# For make registration
+- php bin/console make:registration-form
+# For verify email
+composer require symfonycasts/verify-email-bundle
