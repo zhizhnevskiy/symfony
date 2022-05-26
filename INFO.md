@@ -43,3 +43,6 @@ choose - Login form authenticator
 - php bin/console make:registration-form
 # For verify email
 composer require symfonycasts/verify-email-bundle
+
+# Show all services
+- php bin/console debug:container

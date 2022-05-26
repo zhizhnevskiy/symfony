@@ -5,3 +5,7 @@ controllers:
 kernel:
     resource: ../src/Kernel.php
     type: annotation
+
+index:
+    path: /service
+    controller: App\Controller\ServiceController::index
