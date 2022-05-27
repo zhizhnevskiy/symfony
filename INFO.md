@@ -46,3 +46,6 @@ composer require symfonycasts/verify-email-bundle
 
 # Show all services
 - php bin/console debug:container
+
+# For work with HTTP request
+- composer require symfony/http-client
