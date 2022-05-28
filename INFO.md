@@ -16,19 +16,23 @@
 
 # Require doctrine
 - composer require symfony/orm-pack
-- composer require --dev symfony/maker-bundle
 # Create new DB
 - change .env
 DATABASE_URL="mysql://admin:phpmyadmin@127.0.0.1:3306/symfony?serverVersion=5.7&charset=utf8mb4"
 - php bin/console doctrine:database:create
 # Make new model
 - php bin/console make:entity EntityName
+- or
+- symfony console make:entity
 # Update exist model
 - php bin/console make:entity --regenerate
 # Make new migration or update exist table
 - php bin/console make:migration
 # Do migrations
 - php bin/console doctrine:migrations:migrate
+# Require add fixtures and add some data in DB
+- composer require --dev doctrine/doctrine-fixtures-bundle
+- symfony console doctrine:fixtures:load
 
 # For require security
 - composer require symfony/security-bundle
