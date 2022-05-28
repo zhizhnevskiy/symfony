@@ -11,8 +11,6 @@
 
 # For add maker
 - composer require --dev symfony/maker-bundle
-# Show command
-- php bin/console
 # Make new controller
 - php bin/console make:controller
 
@@ -46,6 +44,10 @@ composer require symfonycasts/verify-email-bundle
 
 # Show all services
 - php bin/console debug:container
+# Show all command
+- php bin/console
+# Show all routers
+- symfony console debug:router
 
 # For work with HTTP request
 - composer require symfony/http-client
