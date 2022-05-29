@@ -4,10 +4,23 @@
 - composer require "twig/twig:^2.0"
 # Require apache and add .htaccess to public
 - composer require symfony/apache-pack
-# To start using Symfony UX
+# Require asset
+- composer require symfony/asset
+# To start using Symfony UX and webpack
 - composer require symfony/webpack-encore-bundle
 # For SCSS file
 - npm install sass-loader@^12.0.0 sass --save-dev^C
+# For adding Tailwind
+- composer require -D tailwindcss postcss-loader purgecss-webpack-plugin glob-all path
+- composer require -D tailwindcss
+For create postcss.config.js and tailwind.config.js
+- npx tailwindcss init -p
+Update postcss.config.js, tailwind.config.js, webpack.config.js and assets/styles/app.css
+Run to compile tailwind
+# For watch and build tailwindcss
+- npx tailwindcss -i ./assets/styles/app.css -o ./public/build/app.css --watch
+# For download files
+- npm install file-loader --save-dev
 
 # For add maker
 - composer require --dev symfony/maker-bundle
@@ -46,10 +59,10 @@ choose - Login form authenticator
 # For verify email
 composer require symfonycasts/verify-email-bundle
 
-# Show all services
-- php bin/console debug:container
 # Show all command
 - php bin/console
+# Show all services
+- php bin/console debug:container
 # Show all routers
 - symfony console debug:router
 
