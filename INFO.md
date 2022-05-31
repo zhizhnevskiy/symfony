@@ -5,6 +5,8 @@
 # Start watch and build tailwindcss
 - npx tailwindcss -i ./assets/styles/app.css -o ./public/build/app.css --watch
 
+# Before command use 'symfony console' or 'php bin/console'
+
 # Require twig
 - composer require "twig/twig:^2.0"
 # Require apache and add .htaccess to public
@@ -33,24 +35,22 @@
 # For add maker
 - composer require --dev symfony/maker-bundle
 # Make new controller
-- php bin/console make:controller
+- symfony console make:controller
 
 # Require doctrine
 - composer require symfony/orm-pack
 # Create new DB
 - change .env
   DATABASE_URL="mysql://admin:phpmyadmin@127.0.0.1:3306/symfony?serverVersion=5.7&charset=utf8mb4"
-- php bin/console doctrine:database:create
+- symfony console doctrine:database:create
 # Make new model or add new row
-- php bin/console make:entity EntityName
-- or
-- symfony console make:entity
+- symfony console make:entity EntityName
 # Update exist model
-- php bin/console make:entity --regenerate
+- symfony console make:entity --regenerate
 # Make new migration or update exist table
-- php bin/console make:migration
+- symfony console make:migration
 # Do migrations
-- php bin/console doctrine:migrations:migrate
+- symfony console doctrine:migrations:migrate
 # Require add fixtures and add some data in DB
 - composer require --dev doctrine/doctrine-fixtures-bundle
 - symfony console doctrine:fixtures:load
@@ -62,18 +62,18 @@
 # For require security
 - composer require symfony/security-bundle
 # For create new user
-- php bin/console make:user
-# For make auth (login and logout)
-- php bin/console make:auth
-  choose - Login form authenticator
+- symfony console make:user
 # For make registration
-- php bin/console make:registration-form
+- symfony console make:registration-form
+# For make auth (login and logout)
+- symfony console make:auth
+  choose - Login form authenticator
 # For verify email
 composer require symfonycasts/verify-email-bundle
 
 # Show all command
-- php bin/console
+- symfony console
 # Show all services
-- php bin/console debug:container
+- symfony console debug:container
 # Show all routers
 - symfony console debug:router
